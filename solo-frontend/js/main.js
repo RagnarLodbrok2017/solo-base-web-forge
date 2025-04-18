@@ -1,61 +1,72 @@
-// Navigation scroll effect
-document.addEventListener('DOMContentLoaded', function() {
-    const navigation = document.getElementById('navigation');
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
-
+// Navigation scroll effect with jQuery
+$(document).ready(function() {
     // Handle scroll effect for navigation
     function handleScroll() {
-        if (window.scrollY > 20) {
-            navigation.classList.add('scrolled');
+        if ($(window).scrollTop() > 20) {
+            $('#navigation').addClass('scrolled');
+            $('#navigation').removeClass('transparent');
         } else {
-            navigation.classList.remove('scrolled');
+            $('#navigation').removeClass('scrolled');
+            if ($('#navigation').hasClass('navbar-light')) {
+                $('#navigation').addClass('transparent');
+            }
         }
     }
 
-    // Toggle mobile menu
-    function toggleMobileMenu() {
-        mobileMenu.classList.toggle('hidden');
-        
-        // Toggle menu icon between hamburger and X
-        if (mobileMenu.classList.contains('hidden')) {
-            menuIcon.classList.remove('fa-times');
-            menuIcon.classList.add('fa-bars');
-        } else {
-            menuIcon.classList.remove('fa-bars');
-            menuIcon.classList.add('fa-times');
-        }
+    // Add transparent class to navbar on page load if at top
+    if ($(window).scrollTop() <= 20) {
+        $('#navigation').addClass('transparent');
     }
 
-    // Add event listeners
-    window.addEventListener('scroll', handleScroll);
-    menuToggle.addEventListener('click', toggleMobileMenu);
+    // Handle scroll event
+    $(window).scroll(handleScroll);
 
-    // Close mobile menu when clicking on a link
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', toggleMobileMenu);
-    });
+    // Initialize tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+    // Initialize popovers
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
 
     // Initialize scroll state
     handleScroll();
 
     // Animate elements when they come into view
-    const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.animate-on-scroll');
-        
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
+    function animateOnScroll() {
+        $('.animate-on-scroll').each(function() {
+            var elementPosition = $(this).offset().top;
+            var windowHeight = $(window).height();
+            var scrollPosition = $(window).scrollTop();
             
-            if (elementPosition < windowHeight - 100) {
-                element.classList.add('animate-fade-up');
+            if (scrollPosition > elementPosition - windowHeight + 100) {
+                $(this).addClass('visible');
             }
         });
-    };
+    }
 
-    // Add animation class to elements that should animate on scroll
+    // Run animation check on scroll
+    $(window).scroll(animateOnScroll);
+    
+    // Run initial animation check
+    animateOnScroll();
+    
+    // Add smooth scrolling to all links
+    $('a[href*="#"]').on('click', function(e) {
+        if (this.hash !== '') {
+            e.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top - 70
+            }, 800);
+        }
+    });
+
+    // Animate elements when they come into view
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         const headings = section.querySelectorAll('h2, h3');

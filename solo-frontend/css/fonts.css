@@ -1,144 +1,162 @@
-/* Poppins Font Family */
+/* Bebas Neue Font for Headlines and Hero Text */
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Thin.ttf') format('truetype');
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Barlow Condensed Font Family */
+@font-face {
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-ThinItalic.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-ThinItalic.ttf') format('truetype');
     font-weight: 100;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-ExtraLight.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-ExtraLight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-ExtraLightItalic.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-ExtraLightItalic.ttf') format('truetype');
     font-weight: 200;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Light.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-LightItalic.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-LightItalic.ttf') format('truetype');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Italic.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-Italic.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-MediumItalic.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-MediumItalic.ttf') format('truetype');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-SemiBoldItalic.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-SemiBoldItalic.ttf') format('truetype');
     font-weight: 600;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-BoldItalic.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-BoldItalic.ttf') format('truetype');
     font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-ExtraBold.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-ExtraBoldItalic.ttf') format('truetype');
     font-weight: 800;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Black.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-BlackItalic.ttf') format('truetype');
+    font-family: 'Barlow Condensed';
+    src: url('../fonts/BarlowCondensed-BlackItalic.ttf') format('truetype');
     font-weight: 900;
     font-style: italic;
     font-display: swap;
+}
+
+/* Font Classes */
+.font-heading {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.font-body {
+    font-family: 'Barlow Condensed', sans-serif;
 }

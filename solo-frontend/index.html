@@ -3,67 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SBC Construction</title>
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>SBC Construction - Building Tomorrow's Infrastructure Today</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
 </head>
 <body>
-    <nav id="navigation" class="fixed w-full z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="text-2xl font-heading font-bold text-gray-900">SBC</a>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-800 hover:text-primary">Home</a>
-                    <a href="about.html" class="text-gray-800 hover:text-primary">About</a>
-                    <a href="services.html" class="text-gray-800 hover:text-primary">Services</a>
-                    <a href="projects.html" class="text-gray-800 hover:text-primary">Projects</a>
-                    <a href="contact.html" class="bg-primary text-white px-4 py-2 rounded hover:bg-construction-dark transition-colors">Contact Us</a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="text-gray-800 hover:text-primary">
-                        <i class="fas fa-bars" id="menu-icon"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden">
-                <div class="flex flex-col space-y-4 px-2 pt-2 pb-4 bg-white">
-                    <a href="index.html" class="text-gray-800 hover:text-primary">Home</a>
-                    <a href="about.html" class="text-gray-800 hover:text-primary">About</a>
-                    <a href="services.html" class="text-gray-800 hover:text-primary">Services</a>
-                    <a href="projects.html" class="text-gray-800 hover:text-primary">Projects</a>
-                    <a href="contact.html" class="bg-primary text-white px-4 py-2 rounded hover:bg-construction-dark transition-colors">Contact Us</a>
-                </div>
+    <nav id="navigation" class="navbar navbar-expand-lg fixed-top navbar-light nav-custom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">SBC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-custom-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-contact" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <div class="min-h-screen">
         <!-- Hero Section -->
-        <section class="relative h-screen flex items-center">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent z-10"></div>
+        <section class="position-relative vh-100 d-flex align-items-center hero-section">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-60 z-index-1"></div>
             <img
                 src="images/background.jpg"
                 alt="Construction site"
-                class="absolute inset-0 w-full h-full object-cover"
+                class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
             />
-            <div class="container mx-auto px-4 relative z-20">
-                <div class="max-w-3xl">
-                    <h1 class="text-5xl md:text-7xl font-heading font-bold text-white mb-6 animate-fade-up">
+            <div class="container position-relative z-index-2">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-white mb-4 animate-on-scroll">
                         Building Tomorrow's Infrastructure Today
                     </h1>
-                    <p class="text-xl text-white/90 mb-8 animate-fade-up">
+                    <p class="fs-4 text-white-80 mb-5 animate-on-scroll">
                         Professional construction and development solutions for your most ambitious projects
                     </p>
                     <a
                         href="contact.html"
-                        class="inline-block bg-primary hover:bg-construction-dark text-white font-semibold px-8 py-4 rounded transition-colors animate-fade-up"
+                        class="btn btn-primary btn-lg animate-on-scroll"
                     >
                         Start Your Project
                     </a>
@@ -72,123 +69,161 @@
         </section>
 
         <!-- Services Section -->
-        <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-heading font-bold text-center mb-12">
-                    Our Services
-                </h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <i class="fas fa-building text-primary mb-4 text-3xl"></i>
-                        <h3 class="text-xl font-bold mb-2">Construction</h3>
-                        <p class="text-gray-600">Full-service construction management and general contracting</p>
+        <section class="py-5 py-md-5 bg-light">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h2 class="display-5 fw-bold mb-3">Our Services</h2>
+                        <div class="divider-custom mx-auto"></div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <i class="fas fa-users text-primary mb-4 text-3xl"></i>
-                        <h3 class="text-xl font-bold mb-2">Project Management</h3>
-                        <p class="text-gray-600">Expert project management and coordination services</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="fas fa-building text-primary mb-3 fa-3x"></i>
+                                <h3 class="card-title h5 fw-bold">Construction</h3>
+                                <p class="card-text text-secondary">Full-service construction management and general contracting</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <i class="fas fa-hammer text-primary mb-4 text-3xl"></i>
-                        <h3 class="text-xl font-bold mb-2">Renovation</h3>
-                        <p class="text-gray-600">Complete renovation and remodeling solutions</p>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="fas fa-users text-primary mb-3 fa-3x"></i>
+                                <h3 class="card-title h5 fw-bold">Project Management</h3>
+                                <p class="card-text text-secondary">Expert project management and coordination services</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <i class="fas fa-chart-bar text-primary mb-4 text-3xl"></i>
-                        <h3 class="text-xl font-bold mb-2">Development</h3>
-                        <p class="text-gray-600">Strategic property development and planning</p>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="fas fa-hammer text-primary mb-3 fa-3x"></i>
+                                <h3 class="card-title h5 fw-bold">Renovation</h3>
+                                <p class="card-text text-secondary">Complete renovation and remodeling solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <div class="card-body text-center p-4">
+                                <i class="fas fa-chart-bar text-primary mb-3 fa-3x"></i>
+                                <h3 class="card-title h5 fw-bold">Development</h3>
+                                <p class="card-text text-secondary">Strategic property development and planning</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="text-4xl font-heading font-bold mb-6">
+        <section class="py-5 py-md-5 bg-white">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <h2 class="display-5 fw-bold mb-4">
                             About SBC Construction
                         </h2>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
+                        <p class="text-secondary mb-4 lead">
                             Since our establishment, SBC has been at the forefront of innovative construction 
                             solutions. We combine traditional craftsmanship with modern technology to deliver 
                             exceptional results that stand the test of time.
                         </p>
-                        <div class="flex flex-col gap-4">
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-bullseye text-primary mt-1"></i>
+                        <div class="d-flex flex-column gap-4 mb-4">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-bullseye text-primary mt-1 me-3"></i>
                                 <div>
-                                    <h3 class="font-bold mb-1">Our Mission</h3>
-                                    <p class="text-gray-600">To deliver exceptional construction services that exceed client expectations while maintaining the highest standards of quality and safety.</p>
+                                    <h3 class="h5 fw-bold mb-2">Our Mission</h3>
+                                    <p class="text-secondary">To deliver exceptional construction services that exceed client expectations while maintaining the highest standards of quality and safety.</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-trophy text-primary mt-1"></i>
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-trophy text-primary mt-1 me-3"></i>
                                 <div>
-                                    <h3 class="font-bold mb-1">Our Experience</h3>
-                                    <p class="text-gray-600">With decades of combined experience, our team has successfully completed projects across residential, commercial, and industrial sectors.</p>
+                                    <h3 class="h5 fw-bold mb-2">Our Experience</h3>
+                                    <p class="text-secondary">With decades of combined experience, our team has successfully completed projects across residential, commercial, and industrial sectors.</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-briefcase text-primary mt-1"></i>
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-briefcase text-primary mt-1 me-3"></i>
                                 <div>
-                                    <h3 class="font-bold mb-1">Our Approach</h3>
-                                    <p class="text-gray-600">We take a collaborative approach to every project, working closely with clients to understand their vision and deliver tailored solutions.</p>
+                                    <h3 class="h5 fw-bold mb-2">Our Approach</h3>
+                                    <p class="text-secondary">We take a collaborative approach to every project, working closely with clients to understand their vision and deliver tailored solutions.</p>
                                 </div>
                             </div>
                         </div>
-                        <a href="about.html" class="inline-block mt-6 text-primary font-semibold hover:underline">
-                            Learn more about us
+                        <a href="about.html" class="btn btn-link text-primary p-0 fw-bold">
+                            Learn more about us <i class="fas fa-arrow-right ms-1"></i>
                         </a>
                     </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="images/pexels-pixabay-159358.jpg" alt="Construction site" class="rounded-lg w-full h-64 object-cover" />
-                        <img src="images/pexels-pixabay-7931.jpg" alt="Construction workers" class="rounded-lg w-full h-64 object-cover" />
-                        <img src="images/pexels-marosmarkovic-1451416.jpg" alt="Building exterior" class="rounded-lg w-full h-64 object-cover" />
-                        <img src="images/pexels-rezwan-1078884.jpg" alt="Construction equipment" class="rounded-lg w-full h-64 object-cover" />
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <img src="images/pexels-pixabay-159358.jpg" alt="Construction site" class="rounded img-fluid h-100 w-100 object-fit-cover shadow-sm" />
+                            </div>
+                            <div class="col-6">
+                                <img src="images/pexels-pixabay-7931.jpg" alt="Construction workers" class="rounded img-fluid h-100 w-100 object-fit-cover shadow-sm" />
+                            </div>
+                            <div class="col-6">
+                                <img src="images/pexels-marosmarkovic-1451416.jpg" alt="Building exterior" class="rounded img-fluid h-100 w-100 object-fit-cover shadow-sm" />
+                            </div>
+                            <div class="col-6">
+                                <img src="images/pexels-rezwan-1078884.jpg" alt="Construction equipment" class="rounded img-fluid h-100 w-100 object-fit-cover shadow-sm" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Showcase -->
-        <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-heading font-bold text-center mb-6">
-                    Featured Projects
-                </h2>
-                <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">
-                    Explore some of our recent construction and development projects that showcase our expertise and commitment to excellence.
-                </p>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                        <img src="images/pexels-sevenstormphotography-439416.jpg" alt="Commercial building" class="w-full h-64 object-cover" />
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Downtown Office Complex</h3>
-                            <p class="text-gray-600 mb-4">A modern 12-story office building featuring sustainable design and state-of-the-art facilities.</p>
-                            <a href="projects.html" class="text-primary font-semibold hover:underline">View Project</a>
+        <section class="py-5 py-md-5 bg-light">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h2 class="display-5 fw-bold mb-3">Featured Projects</h2>
+                        <div class="divider-custom mx-auto"></div>
+                        <p class="text-secondary col-md-8 mx-auto mb-5">
+                            Explore some of our recent construction and development projects that showcase our expertise and commitment to excellence.
+                        </p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100 hover-card">
+                            <img src="images/pexels-sevenstormphotography-439416.jpg" alt="Commercial building" class="card-img-top" style="height: 240px; object-fit: cover;" />
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 fw-bold">Downtown Office Complex</h3>
+                                <p class="card-text text-secondary mb-3">A modern 12-story office building featuring sustainable design and state-of-the-art facilities.</p>
+                                <a href="projects.html" class="btn btn-link text-primary p-0">View Project <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                        <img src="images/pexels-pixabay-159358.jpg" alt="Residential development" class="w-full h-64 object-cover" />
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Riverside Residences</h3>
-                            <p class="text-gray-600 mb-4">A luxury residential development with 45 units, featuring premium amenities and waterfront views.</p>
-                            <a href="projects.html" class="text-primary font-semibold hover:underline">View Project</a>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100 hover-card">
+                            <img src="images/pexels-pixabay-159358.jpg" alt="Residential development" class="card-img-top" style="height: 240px; object-fit: cover;" />
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 fw-bold">Riverside Residences</h3>
+                                <p class="card-text text-secondary mb-3">A luxury residential development with 45 units, featuring premium amenities and waterfront views.</p>
+                                <a href="projects.html" class="btn btn-link text-primary p-0">View Project <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                        <img src="images/pexels-pixabay-7931.jpg" alt="Industrial facility" class="w-full h-64 object-cover" />
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Tech Manufacturing Facility</h3>
-                            <p class="text-gray-600 mb-4">A 50,000 sq ft industrial facility designed for high-tech manufacturing with advanced infrastructure.</p>
-                            <a href="projects.html" class="text-primary font-semibold hover:underline">View Project</a>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100 hover-card">
+                            <img src="images/pexels-pixabay-7931.jpg" alt="Industrial facility" class="card-img-top" style="height: 240px; object-fit: cover;" />
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 fw-bold">Tech Manufacturing Facility</h3>
+                                <p class="card-text text-secondary mb-3">A 50,000 sq ft industrial facility designed for high-tech manufacturing with advanced infrastructure.</p>
+                                <a href="projects.html" class="btn btn-link text-primary p-0">View Project <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-12">
-                    <a href="projects.html" class="inline-block bg-primary hover:bg-construction-dark text-white font-semibold px-8 py-4 rounded transition-colors">
+                <div class="text-center mt-5">
+                    <a href="projects.html" class="btn btn-primary btn-lg">
                         View All Projects
                     </a>
                 </div>
@@ -383,89 +418,88 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="py-20 bg-primary text-white">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-4xl font-heading font-bold mb-6">
-                    Ready to Start Your Project?
-                </h2>
-                <p class="text-xl mb-8 opacity-90">
-                    Contact us today to discuss your construction needs
-                </p>
-                <a
-                    href="contact.html"
-                    class="inline-block bg-white text-primary hover:bg-gray-100 font-semibold px-8 py-4 rounded transition-colors"
-                >
-                    Get in Touch
-                </a>
+        <section class="py-5 py-md-5 bg-primary text-white">
+            <div class="container text-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="display-5 fw-bold mb-3">
+                            Ready to Start Your Project?
+                        </h2>
+                        <p class="fs-5 mb-4">
+                            Contact us today for a free consultation and quote. Let's bring your vision to life.
+                        </p>
+                        <a href="contact.html" class="btn btn-light btn-lg text-primary fw-bold px-5">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
 
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">SBC Construction</h3>
-                    <p class="text-gray-400 mb-4">Building tomorrow's infrastructure today with quality, innovation, and integrity.</p>
-                    <div class="flex gap-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="h5 fw-bold mb-3">SBC Construction</h3>
+                    <p class="text-muted mb-4">Building tomorrow's infrastructure today with quality, innovation, and integrity.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-muted social-link">
                             <i class="fab fa-facebook"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="#" class="text-muted social-link">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="#" class="text-muted social-link">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="#" class="text-muted social-link">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </div>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
-                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="h5 fw-bold mb-3">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-muted footer-link">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-muted footer-link">About Us</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted footer-link">Services</a></li>
+                        <li class="mb-2"><a href="projects.html" class="text-muted footer-link">Projects</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-muted footer-link">Contact</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Construction</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Project Management</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Renovation</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Development</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Consulting</a></li>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="h5 fw-bold mb-3">Services</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="services.html" class="text-muted footer-link">Construction</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted footer-link">Project Management</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted footer-link">Renovation</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted footer-link">Development</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted footer-link">Consulting</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Contact</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-map-marker-alt mt-1"></i>
-                            <span class="text-gray-400">123 Construction Ave, Suite 400<br />Metropolis, NY 10001</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-phone mt-1"></i>
-                            <span class="text-gray-400">(555) 123-4567</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-envelope mt-1"></i>
-                            <span class="text-gray-400">info@sbcconstruction.com</span>
-                        </li>
-                    </ul>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="h5 fw-bold mb-3">Contact Us</h3>
+                    <address class="text-muted">
+                        <p class="mb-2">123 Construction Way</p>
+                        <p class="mb-2">Building City, BC 12345</p>
+                        <p class="mb-2">United States</p>
+                        <p class="mb-2">Phone: (123) 456-7890</p>
+                        <p>Email: info@sbconstruction.com</p>
+                    </address>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+            <div class="border-top border-secondary mt-4 pt-4 text-center text-muted">
                 <p>&copy; 2025 SBC Construction. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- jQuery -->    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
