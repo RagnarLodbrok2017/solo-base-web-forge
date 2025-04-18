@@ -1,5 +1,4 @@
-
-import { Building2, Users, Hammer, BarChart, Phone, Mail, MapPin, Trophy, Target, Briefcase } from 'lucide-react';
+import { Building2, Users, Hammer, BarChart, Phone, Mail, MapPin, Trophy, Target, Briefcase, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -152,38 +151,135 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-heading font-bold text-center mb-12">
-            Get In Touch
+            Contact Us
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <Phone className="w-12 h-12 mx-auto text-primary mb-4" />
-                <h3 className="font-bold mb-2">Call Us</h3>
-                <p className="text-gray-600">+1 (555) 123-4567</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <Mail className="w-12 h-12 mx-auto text-primary mb-4" />
-                <h3 className="font-bold mb-2">Email Us</h3>
-                <p className="text-gray-600">info@sbconstruction.com</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <MapPin className="w-12 h-12 mx-auto text-primary mb-4" />
-                <h3 className="font-bold mb-2">Visit Us</h3>
-                <p className="text-gray-600">123 Construction Ave, Building City, ST 12345</p>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="text-center mt-12">
-            <Link
-              to="/contact"
-              className="inline-block bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 rounded transition-colors"
-            >
-              Contact Us Now
-            </Link>
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold mb-4">Get in Touch</h3>
+                <p className="text-gray-600 mb-6">
+                  We're here to help with your construction and development needs. Reach out to us through any of these channels:
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <Phone className="w-6 h-6 text-primary" />
+                    <div>
+                      <p className="font-semibold">Main Office</p>
+                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <Phone className="w-6 h-6 text-primary" />
+                    <div>
+                      <p className="font-semibold">Project Inquiries</p>
+                      <p className="text-gray-600">+1 (555) 234-5678</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <Mail className="w-6 h-6 text-primary" />
+                    <div>
+                      <p className="font-semibold">Email Us</p>
+                      <p className="text-gray-600">info@sbconstruction.com</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <MapPin className="w-6 h-6 text-primary mt-1" />
+                    <div>
+                      <p className="font-semibold">Main Office</p>
+                      <p className="text-gray-600">123 Construction Ave, Building City, ST 12345</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <MapPin className="w-6 h-6 text-primary mt-1" />
+                    <div>
+                      <p className="font-semibold">Project Office</p>
+                      <p className="text-gray-600">456 Development St, Construction Town, ST 67890</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-4">Business Hours</h3>
+                <div className="space-y-2 text-gray-600">
+                  <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                  <p>Saturday: 9:00 AM - 2:00 PM</p>
+                  <p>Sunday: Closed</p>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-4">Follow Us</h3>
+                <div className="flex gap-4">
+                  <Link to="#" className="text-gray-600 hover:text-primary transition-colors">
+                    <Facebook className="w-6 h-6" />
+                  </Link>
+                  <Link to="#" className="text-gray-600 hover:text-primary transition-colors">
+                    <Instagram className="w-6 h-6" />
+                  </Link>
+                  <Link to="#" className="text-gray-600 hover:text-primary transition-colors">
+                    <Linkedin className="w-6 h-6" />
+                  </Link>
+                  <Link to="#" className="text-gray-600 hover:text-primary transition-colors">
+                    <Twitter className="w-6 h-6" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Contact Menu */}
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold mb-6">Quick Contact Menu</h3>
+              <div className="grid gap-6">
+                <Link
+                  to="/services"
+                  className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+                >
+                  <div className="flex items-center gap-4">
+                    <Building2 className="w-6 h-6 text-primary" />
+                    <div>
+                      <p className="font-semibold">Construction Services</p>
+                      <p className="text-sm text-gray-600">View our construction services</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link
+                  to="/projects"
+                  className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+                >
+                  <div className="flex items-center gap-4">
+                    <Briefcase className="w-6 h-6 text-primary" />
+                    <div>
+                      <p className="font-semibold">Project Inquiries</p>
+                      <p className="text-sm text-gray-600">Start a new project with us</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link
+                  to="/contact"
+                  className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+                >
+                  <div className="flex items-center gap-4">
+                    <Users className="w-6 h-6 text-primary" />
+                    <div>
+                      <p className="font-semibold">Career Opportunities</p>
+                      <p className="text-sm text-gray-600">Join our team</p>
+                    </div>
+                  </div>
+                </Link>
+                <Link
+                  to="/contact"
+                  className="flex items-center justify-between p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+                >
+                  <div className="flex items-center gap-4">
+                    <Hammer className="w-6 h-6 text-primary" />
+                    <div>
+                      <p className="font-semibold">Maintenance Support</p>
+                      <p className="text-sm text-gray-600">Get maintenance assistance</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -210,4 +306,3 @@ const Index = () => {
 };
 
 export default Index;
-
