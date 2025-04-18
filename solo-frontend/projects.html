@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - SBC Construction</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav id="navigation" class="fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-heading font-bold text-gray-900">SBC</a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-800 hover:text-primary">Home</a>
+                    <a href="about.html" class="text-gray-800 hover:text-primary">About</a>
+                    <a href="services.html" class="text-gray-800 hover:text-primary">Services</a>
+                    <a href="projects.html" class="text-gray-800 hover:text-primary">Projects</a>
+                    <a href="contact.html" class="bg-primary text-white px-4 py-2 rounded hover:bg-construction-dark transition-colors">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 hover:text-primary">
+                        <i class="fas fa-bars" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="flex flex-col space-y-4 px-2 pt-2 pb-4 bg-white">
+                    <a href="index.html" class="text-gray-800 hover:text-primary">Home</a>
+                    <a href="about.html" class="text-gray-800 hover:text-primary">About</a>
+                    <a href="services.html" class="text-gray-800 hover:text-primary">Services</a>
+                    <a href="projects.html" class="text-gray-800 hover:text-primary">Projects</a>
+                    <a href="contact.html" class="bg-primary text-white px-4 py-2 rounded hover:bg-construction-dark transition-colors">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="min-h-screen pt-16">
+        <!-- Hero Section -->
+        <section class="relative py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h1 class="text-5xl font-heading font-bold mb-6 animate-fade-up">Our Projects</h1>
+                    <p class="text-xl text-gray-600 mb-8 animate-fade-up">
+                        Explore our portfolio of successful construction and development projects
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Categories -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button class="px-6 py-2 bg-primary text-white rounded hover:bg-construction-dark transition-colors">All Projects</button>
+                    <button class="px-6 py-2 bg-gray-100 text-gray-800 rounded hover:bg-gray-200 transition-colors">Commercial</button>
+                    <button class="px-6 py-2 bg-gray-100 text-gray-800 rounded hover:bg-gray-200 transition-colors">Residential</button>
+                    <button class="px-6 py-2 bg-gray-100 text-gray-800 rounded hover:bg-gray-200 transition-colors">Industrial</button>
+                    <button class="px-6 py-2 bg-gray-100 text-gray-800 rounded hover:bg-gray-200 transition-colors">Renovation</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-heading font-bold text-center mb-12 animate-on-scroll">
+                    Featured Projects
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-on-scroll">
+                        <img src="images/pexels-sevenstormphotography-439416.jpg" alt="Downtown Office Complex" class="w-full h-64 object-cover" />
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-bold">Downtown Office Complex</h3>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Commercial</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">A modern 12-story office building featuring sustainable design and state-of-the-art facilities in the heart of the business district.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-500 text-sm">Completed: January 2024</span>
+                                <button class="text-primary font-semibold hover:underline">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-on-scroll">
+                        <img src="images/pexels-pixabay-159358.jpg" alt="Riverside Residences" class="w-full h-64 object-cover" />
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-bold">Riverside Residences</h3>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Residential</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">A luxury residential development with 45 units, featuring premium amenities and waterfront views in a prime location.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-500 text-sm">Completed: March 2023</span>
+                                <button class="text-primary font-semibold hover:underline">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-on-scroll">
+                        <img src="images/pexels-pixabay-7931.jpg" alt="Tech Manufacturing Facility" class="w-full h-64 object-cover" />
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-bold">Tech Manufacturing Facility</h3>
+                                <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Industrial</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">A 50,000 sq ft industrial facility designed for high-tech manufacturing with advanced infrastructure and energy efficiency.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-500 text-sm">Completed: August 2023</span>
+                                <button class="text-primary font-semibold hover:underline">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-on-scroll">
+                        <img src="images/pexels-marosmarkovic-1451416.jpg" alt="Heritage Hotel Renovation" class="w-full h-64 object-cover" />
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-bold">Heritage Hotel Renovation</h3>
+                                <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded">Renovation</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Complete renovation of a historic hotel, preserving its architectural heritage while integrating modern amenities and technology.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-500 text-sm">Completed: November 2023</span>
+                                <button class="text-primary font-semibold hover:underline">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-on-scroll">
+                        <img src="images/pexels-rezwan-1078884.jpg" alt="Parkview Shopping Center" class="w-full h-64 object-cover" />
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-bold">Parkview Shopping Center</h3>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Commercial</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">A modern retail development featuring 25 stores, restaurants, and entertainment venues in a landscaped outdoor setting.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-500 text-sm">Completed: May 2023</span>
+                                <button class="text-primary font-semibold hover:underline">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 6 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-on-scroll">
+                        <img src="images/pexels-rezwan-1216544.jpg" alt="Lakeside Townhomes" class="w-full h-64 object-cover" />
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-bold">Lakeside Townhomes</h3>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Residential</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">A community of 30 luxury townhomes with modern design, energy-efficient features, and scenic lake views.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-500 text-sm">Completed: February 2024</span>
+                                <button class="text-primary font-semibold hover:underline">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <button class="inline-block bg-primary hover:bg-construction-dark text-white font-semibold px-8 py-4 rounded transition-colors">
+                        Load More Projects
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Highlights -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-heading font-bold text-center mb-6 animate-on-scroll">
+                    Project Highlights
+                </h2>
+                <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12 animate-on-scroll">
+                    Key statistics and achievements from our portfolio of completed projects
+                </p>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-sm text-center animate-on-scroll">
+                        <i class="fas fa-building text-primary mb-4 text-3xl"></i>
+                        <div class="text-4xl font-bold mb-2">150+</div>
+                        <p class="text-gray-600">Projects Completed</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm text-center animate-on-scroll">
+                        <i class="fas fa-hard-hat text-primary mb-4 text-3xl"></i>
+                        <div class="text-4xl font-bold mb-2">2.5M+</div>
+                        <p class="text-gray-600">Square Feet Built</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm text-center animate-on-scroll">
+                        <i class="fas fa-medal text-primary mb-4 text-3xl"></i>
+                        <div class="text-4xl font-bold mb-2">15</div>
+                        <p class="text-gray-600">Industry Awards</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm text-center animate-on-scroll">
+                        <i class="fas fa-users text-primary mb-4 text-3xl"></i>
+                        <div class="text-4xl font-bold mb-2">98%</div>
+                        <p class="text-gray-600">Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Process -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-4xl font-heading font-bold mb-6 animate-on-scroll">
+                            Our Project Approach
+                        </h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed animate-on-scroll">
+                            At SBC Construction, we follow a comprehensive approach to every project, ensuring quality, efficiency, and client satisfaction throughout the process.
+                        </p>
+                        <div class="space-y-6 animate-on-scroll">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
+                                <div>
+                                    <h3 class="font-bold mb-1">Initial Consultation</h3>
+                                    <p class="text-gray-600">We begin by understanding your vision, requirements, and objectives for the project.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
+                                <div>
+                                    <h3 class="font-bold mb-1">Planning & Design</h3>
+                                    <p class="text-gray-600">Our team develops detailed plans, designs, and specifications tailored to your project needs.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
+                                <div>
+                                    <h3 class="font-bold mb-1">Pre-Construction</h3>
+                                    <p class="text-gray-600">We handle permits, approvals, and prepare the site for construction activities.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</div>
+                                <div>
+                                    <h3 class="font-bold mb-1">Construction</h3>
+                                    <p class="text-gray-600">Our skilled team executes the project with quality materials and strict adherence to safety standards.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">5</div>
+                                <div>
+                                    <h3 class="font-bold mb-1">Quality Control</h3>
+                                    <p class="text-gray-600">Regular inspections and quality checks ensure the project meets our high standards.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">6</div>
+                                <div>
+                                    <h3 class="font-bold mb-1">Project Completion</h3>
+                                    <p class="text-gray-600">Final inspections, client walkthrough, and handover of the completed project.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 animate-on-scroll">
+                        <img src="images/pexels-umaraffan499-190417.jpg" alt="Planning meeting" class="rounded-lg w-full h-64 object-cover" />
+                        <img src="images/pexels-sevenstormphotography-439416.jpg" alt="Construction site" class="rounded-lg w-full h-64 object-cover" />
+                        <img src="images/pexels-500photos-com-15338-93400.jpg" alt="Quality inspection" class="rounded-lg w-full h-64 object-cover" />
+                        <img src="images/pexels-nicole-rathmayr-61805-220885.jpg" alt="Project completion" class="rounded-lg w-full h-64 object-cover" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-primary text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-heading font-bold mb-6 animate-on-scroll">
+                    Ready to Start Your Project?
+                </h2>
+                <p class="text-xl mb-8 opacity-90 animate-on-scroll">
+                    Contact us today to discuss your construction needs and how we can help bring your vision to life
+                </p>
+                <a
+                    href="contact.html"
+                    class="inline-block bg-white text-primary hover:bg-gray-100 font-semibold px-8 py-4 rounded transition-colors animate-on-scroll"
+                >
+                    Get a Free Consultation
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">SBC Construction</h3>
+                    <p class="text-gray-400 mb-4">Building tomorrow's infrastructure today with quality, innovation, and integrity.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Construction</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Project Management</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Renovation</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Development</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Consulting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1"></i>
+                            <span class="text-gray-400">123 Construction Ave, Suite 400<br />Metropolis, NY 10001</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone mt-1"></i>
+                            <span class="text-gray-400">(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope mt-1"></i>
+                            <span class="text-gray-400">info@sbcconstruction.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 SBC Construction. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
