@@ -649,6 +649,11 @@ img {
 
 .navbar-nav .nav-item {
   margin: 0 0.25rem;
+  text-transform: uppercase;
+}
+.navbar-nav .nav-item {
+  font-size: .9rem;
+  letter-spacing: 1px;
 }
 
 .hover\:shadow-md:hover {
@@ -730,10 +735,34 @@ img {
 }
 
 .hero-title {
-  font-size: 3.5rem;
   color: var(--color-prussian-blue);
   margin-bottom: 1.5rem;
   line-height: 1.1;
+}
+
+.title-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.title-prefix {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  line-height: 1;
+  color: var(--color-persian-orange);
+}
+
+.title-main {
+  font-size: 7rem;
+  display: inline-block;
+}
+
+.hero-title > span {
+  font-size: 3.5rem;
+  display: block;
 }
 
 .hero-subtitle {
@@ -798,19 +827,30 @@ h1, h2, h3, h4, h5, h6,
 
 .navbar-brand {
   color: var(--color-floral-white);
-  font-weight: 700;
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.navbar-logo {
+  height: 40px;
+  width: auto;
 }
 
 .nav-custom-link {
   color: var(--color-floral-white) !important;
   margin: 0 0.5rem;
   font-weight: 500;
-  transition: color 0.3s ease;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
 }
 
 .nav-custom-link:hover {
-  color: var(--color-buff) !important;
+  color: var(--color-prussian-blue) !important;
+  letter-spacing: 0.15em;
+  background-color: var(--color-floral-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
 }
 
 .btn-contact {
