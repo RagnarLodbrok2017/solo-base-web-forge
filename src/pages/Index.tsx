@@ -1,6 +1,7 @@
 
-import { Building2, Users, Hammer, BarChart } from 'lucide-react';
+import { Building2, Users, Hammer, BarChart, Phone, Mail, MapPin, Trophy, Target, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
   return (
@@ -71,33 +72,118 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-heading font-bold mb-6">
-                Experience & Expertise in Construction
+                About SBC Construction
               </h2>
-              <p className="text-gray-600 mb-6">
-                With years of experience in the construction industry, we bring unparalleled expertise 
-                to every project. Our team of professionals is dedicated to delivering exceptional 
-                results that exceed expectations.
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Since our establishment, SBC has been at the forefront of innovative construction 
+                solutions. We combine traditional craftsmanship with modern technology to deliver 
+                exceptional results that stand the test of time.
               </p>
-              <Link
-                to="/about"
-                className="inline-block bg-secondary hover:bg-blue-800 text-white font-semibold px-6 py-3 rounded transition-colors"
-              >
-                Learn More About Us
-              </Link>
+              <div className="flex flex-col gap-4">
+                <div className="flex items-start gap-3">
+                  <Target className="w-6 h-6 text-primary mt-1" />
+                  <div>
+                    <h3 className="font-bold mb-1">Our Mission</h3>
+                    <p className="text-gray-600">To deliver exceptional construction projects that exceed client expectations.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Trophy className="w-6 h-6 text-primary mt-1" />
+                  <div>
+                    <h3 className="font-bold mb-1">Excellence</h3>
+                    <p className="text-gray-600">Committed to the highest standards of quality and safety in every project.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="relative h-96">
-              <div className="absolute inset-0 bg-construction/20 rounded-lg"></div>
+            <div className="relative h-[500px] rounded-lg overflow-hidden">
               <img
                 src="/lovable-uploads/6e2854ce-8bfb-4d45-9454-265fe1b88f14.png"
-                alt="Construction expertise"
-                className="w-full h-full object-cover rounded-lg"
+                alt="About SBC"
+                className="w-full h-full object-cover"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8">
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="pt-6">
+                <Building2 className="w-12 h-12 mx-auto text-primary mb-4" />
+                <div className="text-4xl font-bold mb-2">150+</div>
+                <p className="text-gray-600">Projects Completed</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="pt-6">
+                <Users className="w-12 h-12 mx-auto text-primary mb-4" />
+                <div className="text-4xl font-bold mb-2">50+</div>
+                <p className="text-gray-600">Team Members</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="pt-6">
+                <Briefcase className="w-12 h-12 mx-auto text-primary mb-4" />
+                <div className="text-4xl font-bold mb-2">15+</div>
+                <p className="text-gray-600">Years Experience</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="pt-6">
+                <Trophy className="w-12 h-12 mx-auto text-primary mb-4" />
+                <div className="text-4xl font-bold mb-2">25+</div>
+                <p className="text-gray-600">Awards Won</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-heading font-bold text-center mb-12">
+            Get In Touch
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="pt-6">
+                <Phone className="w-12 h-12 mx-auto text-primary mb-4" />
+                <h3 className="font-bold mb-2">Call Us</h3>
+                <p className="text-gray-600">+1 (555) 123-4567</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="pt-6">
+                <Mail className="w-12 h-12 mx-auto text-primary mb-4" />
+                <h3 className="font-bold mb-2">Email Us</h3>
+                <p className="text-gray-600">info@sbconstruction.com</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="pt-6">
+                <MapPin className="w-12 h-12 mx-auto text-primary mb-4" />
+                <h3 className="font-bold mb-2">Visit Us</h3>
+                <p className="text-gray-600">123 Construction Ave, Building City, ST 12345</p>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              to="/contact"
+              className="inline-block bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 rounded transition-colors"
+            >
+              Contact Us Now
+            </Link>
           </div>
         </div>
       </section>
@@ -124,3 +210,4 @@ const Index = () => {
 };
 
 export default Index;
+
