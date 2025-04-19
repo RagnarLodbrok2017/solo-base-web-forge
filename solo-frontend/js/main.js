@@ -7,9 +7,7 @@ $(document).ready(function() {
             $('#navigation').removeClass('transparent');
         } else {
             $('#navigation').removeClass('scrolled');
-            if ($('#navigation').hasClass('navbar-light')) {
-                $('#navigation').addClass('transparent');
-            }
+            $('#navigation').addClass('transparent');
         }
     }
 

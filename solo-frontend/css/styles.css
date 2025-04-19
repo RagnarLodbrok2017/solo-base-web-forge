@@ -608,9 +608,9 @@ img {
 }
 
 .nav-custom-link {
-  color: var(--color-body-text) !important;
+  color: var(--color-body-text);
   font-weight: 500;
-  padding: 0.5rem 1rem !important;
+  padding: 0.5rem 1rem;
   position: relative;
   transition: all 0.3s ease;
 }
@@ -628,7 +628,7 @@ img {
 }
 
 .nav-custom-link:hover {
-  color: var(--color-gold) !important;
+  color: var(--color-gold);
 }
 
 .nav-custom-link:hover:after {
@@ -636,16 +636,16 @@ img {
 }
 
 .btn-contact {
-  background-color: var(--color-gold) !important;
-  color: var(--color-white) !important;
-  padding: 0.5rem 1rem !important;
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: all 0.3s ease;
   margin-left: 0.5rem;
 }
 
 .btn-contact:hover {
-  background-color: var(--color-neutral) !important;
+  background-color: var(--color-neutral);
 }
 
 .navbar-nav .nav-item {
@@ -912,7 +912,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .nav-custom-link {
-  color: var(--color-white) !important;
+  color: var(--color-white);
   margin: 0 0.5rem;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -920,7 +920,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .nav-custom-link:hover {
-  color: var(--color-black) !important;
+  color: var(--color-black);
   /* letter-spacing: 0.06em; */
   /* background-color: var(--color-white); */
   padding: 0.25rem 0.75rem;
@@ -929,7 +929,7 @@ h1, h2, h3, h4, h5, h6,
 
 .btn-contact {
   background-color: var(--color-gold);
-  color: var(--color-white) !important;
+  color: var(--color-white);
   padding: 0.5rem 1.25rem;
   border-radius: 0.25rem;
   margin-left: 0.5rem;
@@ -940,7 +940,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .btn-contact:hover {
-  background-color: var(--color-coyote);
+  background-color: var(--color-blue);
+  color: var(--color-white);
 }
 
 /* Section Spacing */
@@ -1161,7 +1162,7 @@ p, .feature-description, .service-description, .hero-subtitle {
 }
 
 .footer-link:hover {
-  color: #fff !important;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -1179,7 +1180,7 @@ p, .feature-description, .service-description, .hero-subtitle {
 
 .social-link:hover {
   background-color: var(--color-dark-blue);
-  color: #fff !important;
+  color: #fff;
   transform: translateY(-3px);
 }
 
@@ -1276,4 +1277,16 @@ p, .feature-description, .service-description, .hero-subtitle {
 .scrolled {
   background-color: white;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.scrolled .nav-link {
+  color: var(--color-gold);
+}
+
+.scrolled .navbar-brand {
+  color: var(--color-gold);
+}
+
+.scrolled .btn-contact {
+  color: var(--color-white);
 }
