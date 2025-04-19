@@ -1,5 +1,22 @@
 // Navigation scroll effect with jQuery
 $(document).ready(function() {
+    // Preloader
+    $(window).on('load', function() {
+        setTimeout(function() {
+            $('#preloader').addClass('preloader-hidden');
+            setTimeout(function() {
+                $('#preloader').hide();
+            }, 500);
+        }, 2000); // Wait for 2 seconds before hiding preloader
+    });
+
+    // Trigger load event if it hasn't fired yet (for cached pages)
+    setTimeout(function() {
+        if (!$('#preloader').hasClass('preloader-hidden')) {
+            $(window).trigger('load');
+        }
+    }, 2500);
+
     // Handle scroll effect for navigation
     function handleScroll() {
         if ($(window).scrollTop() > 20) {
