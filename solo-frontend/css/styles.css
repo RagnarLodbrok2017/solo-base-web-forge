@@ -1086,6 +1086,7 @@ p, .feature-description, .service-description, .hero-subtitle {
   overflow: hidden;
   height: 85vh;
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+  transform-style: preserve-3d;
 }
 
 .about-image-col::after {
@@ -1105,6 +1106,13 @@ p, .feature-description, .service-description, .hero-subtitle {
   height: 100%;
   object-fit: cover;
   display: block;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* This class will be added via JavaScript for cursor-based movement */
+.about-image-interactive {
+  transition: none; /* Transitions now handled by JS for smoother animation */
 }
 
 .about-content-col {
