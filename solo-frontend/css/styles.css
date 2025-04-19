@@ -940,8 +940,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .btn-contact:hover {
-  background-color: var(--color-blue);
-  color: var(--color-white);
+  background-color: var(--color-coyote);
 }
 
 /* Section Spacing */
