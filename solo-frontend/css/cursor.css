@@ -1,6 +1,6 @@
 /* Custom Cursors */
 body {
-  cursor: none;
+  cursor: auto; /* Changed from 'none' to 'auto' to show the default cursor */
 }
 
 .custom-cursor {
@@ -10,7 +10,7 @@ body {
   border-radius: 50%;
   background-color: transparent;
   border: 2px solid rgba(0, 0, 0, 0.5); /* Black border with opacity */
-  pointer-events: none;
+  pointer-events: none; /* This ensures the cursor doesn't interfere with clicking */
   z-index: 9999;
   transform: translate(-50%, -50%);
   display: none;
