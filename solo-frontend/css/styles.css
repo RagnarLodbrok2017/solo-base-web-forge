@@ -1,23 +1,24 @@
 /* Base styles */
 :root {
   /* Main color scheme */
-  --color-floral-white: #FDF9F2;
-  --color-buff: #d7ad87;
-  --color-persian-orange: #ca8c56;
-  --color-coyote: #7a6556;
-  --color-prussian-blue: #293547;
+  --color-white: #FDF9F2;
+  --color-gold-light: #d7ad87;
+  --color-gold: #ca8c56;
+  --color-brown: #7a6556;
+  --color-blue: #293547;
+  --color-black: #111111;
   
-  /* Map new colors to functional variables */
-  --color-primary: var(--color-persian-orange);
-  --color-secondary: var(--color-buff);
-  --color-tertiary: var(--color-coyote);
-  --color-neutral: var(--color-prussian-blue);
-  --color-dark: var(--color-prussian-blue);
-  --color-dark-blue: var(--color-prussian-blue);
-  --color-light: var(--color-floral-white);
-  --color-offwhite: var(--color-floral-white);
-  --color-body-text: var(--color-coyote);
-  --color-muted: var(--color-buff);
+  /* Map colors to functional variables */
+  --color-primary: var(--color-gold);
+  --color-secondary: var(--color-gold-light);
+  --color-tertiary: var(--color-brown);
+  --color-neutral: var(--color-blue);
+  --color-dark: var(--color-blue);
+  --color-dark-blue: var(--color-blue);
+  --color-light: var(--color-white);
+  --color-offwhite: var(--color-white);
+  --color-body-text: var(--color-brown);
+  --color-muted: var(--color-gold-light);
 
   /* Color assignments */
   --background: var(--color-offwhite);
@@ -627,7 +628,7 @@ img {
 }
 
 .nav-custom-link:hover {
-  color: var(--color-dark-blue) !important;
+  color: var(--color-gold) !important;
 }
 
 .nav-custom-link:hover:after {
@@ -635,7 +636,7 @@ img {
 }
 
 .btn-contact {
-  background-color: var(--color-dark-blue) !important;
+  background-color: var(--color-gold) !important;
   color: var(--color-white) !important;
   padding: 0.5rem 1rem !important;
   border-radius: 4px;
@@ -708,7 +709,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
 
@@ -735,8 +736,8 @@ img {
 }
 
 .hero-title {
-  color: var(--color-prussian-blue);
-  margin-bottom: 1.5rem;
+  color: var(--color-black);
+  margin-bottom: 4rem;
   line-height: 1.1;
 }
 
@@ -752,7 +753,7 @@ img {
   font-size: 2.5rem;
   margin-right: 1rem;
   line-height: 1;
-  color: var(--color-persian-orange);
+  color: var(--color-gold);
 }
 
 .title-main {
@@ -761,7 +762,7 @@ img {
 }
 
 .hero-title > span {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   display: block;
 }
 
@@ -774,8 +775,8 @@ img {
 
 .hero-button {
   display: inline-block;
-  background-color: var(--color-persian-orange);
-  color: var(--color-floral-white);
+  background-color: var(--color-gold);
+  color: var(--color-white);
   padding: 1rem 2rem;
   border-radius: 0.25rem;
   font-weight: 600;
@@ -784,7 +785,7 @@ img {
 }
 
 .hero-button:hover {
-  background-color: var(--color-coyote);
+  background-color: var(--color-brown);
 }
 
 /* Heading Styles */
@@ -820,13 +821,13 @@ h1, h2, h3, h4, h5, h6,
 
 /* Navigation Styles */
 .navbar {
-  background-color: var(--color-prussian-blue);
+  background-color: var(--color-blue);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   padding: 1rem 0;
 }
 
 .navbar-brand {
-  color: var(--color-floral-white);
+  color: var(--color-white);
   display: flex;
   align-items: center;
   padding: 0;
@@ -838,7 +839,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .nav-custom-link {
-  color: var(--color-floral-white) !important;
+  color: var(--color-white) !important;
   margin: 0 0.5rem;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -846,16 +847,16 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .nav-custom-link:hover {
-  color: var(--color-prussian-blue) !important;
-  letter-spacing: 0.15em;
-  background-color: var(--color-floral-white);
+  color: var(--color-black) !important;
+  /* letter-spacing: 0.06em; */
+  /* background-color: var(--color-white); */
   padding: 0.25rem 0.75rem;
   border-radius: 4px;
 }
 
 .btn-contact {
-  background-color: var(--color-persian-orange);
-  color: var(--color-floral-white) !important;
+  background-color: var(--color-gold);
+  color: var(--color-white) !important;
   padding: 0.5rem 1.25rem;
   border-radius: 0.25rem;
   margin-left: 0.5rem;
@@ -876,7 +877,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* Services Section */
 .services-section {
-  background-color: var(--color-floral-white);
+  background-color: var(--color-white);
   padding: 5rem 0;
 }
 
@@ -895,7 +896,7 @@ h1, h2, h3, h4, h5, h6,
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--color-dark);
+  color: var(--color-black);
 }
 
 .services-grid {
@@ -905,10 +906,10 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .service-card {
-  background-color: var(--color-floral-white);
+  background-color: var(--color-white);
   border-radius: 0.25rem;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  border: 1px solid var(--color-buff);
+  border: 1px solid var(--color-gold-light);
   transition: all 0.3s ease;
   height: 100%;
 }
@@ -925,14 +926,14 @@ h1, h2, h3, h4, h5, h6,
 
 .service-icon {
   font-size: 3rem;
-  color: var(--color-persian-orange);
+  color: var(--color-gold);
   margin-bottom: 1rem;
 }
 
 .service-title {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
-  color: var(--color-dark);
+  color: var(--color-black);
 }
 
 .service-description {
@@ -956,7 +957,7 @@ p, .feature-description, .service-description, .hero-subtitle {
 
 /* About Section */
 .about-section {
-  background-color: var(--color-floral-white);
+  background-color: var(--color-white);
   padding: 5rem 0;
 }
 
@@ -994,7 +995,7 @@ p, .feature-description, .service-description, .hero-subtitle {
 
 .feature-icon {
   font-size: 1.5rem;
-  color: var(--color-persian-orange);
+  color: var(--color-gold);
   margin-right: 1rem;
   margin-top: 0.25rem;
 }
@@ -1006,7 +1007,7 @@ p, .feature-description, .service-description, .hero-subtitle {
 .feature-title {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: var(--color-dark);
+  color: var(--color-black);
 }
 
 .feature-description {
@@ -1015,7 +1016,7 @@ p, .feature-description, .service-description, .hero-subtitle {
 }
 
 .about-link {
-  color: var(--color-persian-orange);
+  color: var(--color-gold);
   text-decoration: none;
   font-weight: 600;
   display: inline-flex;
@@ -1064,7 +1065,7 @@ p, .feature-description, .service-description, .hero-subtitle {
 .divider-custom {
   width: 80px;
   height: 4px;
-  background-color: var(--color-persian-orange);
+  background-color: var(--color-gold);
   margin-bottom: 2rem;
 }
 
