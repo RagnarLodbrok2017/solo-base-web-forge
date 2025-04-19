@@ -17,6 +17,30 @@ $(document).ready(function() {
         }
     }, 2500);
 
+    // Hero Slideshow
+    function initHeroSlideshow() {
+        const images = $('.hero-image');
+        let currentIndex = 0;
+        
+        // Show the first image initially
+        $(images[currentIndex]).addClass('active');
+        
+        // Change image every 2 seconds
+        setInterval(function() {
+            // Hide current image
+            $(images[currentIndex]).removeClass('active');
+            
+            // Move to next image or back to first
+            currentIndex = (currentIndex + 1) % images.length;
+            
+            // Show new image
+            $(images[currentIndex]).addClass('active');
+        }, 2000);
+    }
+    
+    // Initialize hero slideshow
+    initHeroSlideshow();
+
     // Handle scroll effect for navigation
     function handleScroll() {
         if ($(window).scrollTop() > 20) {
