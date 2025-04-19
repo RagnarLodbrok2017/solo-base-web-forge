@@ -1,0 +1,152 @@
+/* Responsive styles for larger screens */
+
+/* For screens 1920px and above */
+@media (min-width: 1920px) {
+  /* Increase container width */
+  .container,
+  .section-container,
+  .about-container,
+  .testimonial-carousel,
+  .footer-container {
+    max-width: 1500px;
+  }
+  
+  /* Navbar and navigation links */
+  .navbar-nav .nav-item {
+    font-size: 1.1rem;
+    letter-spacing: 1.2px;
+  }
+  
+  .nav-custom-link {
+    padding: 0.75rem 1.25rem !important;
+    margin: 0 0.5rem;
+  }
+  
+  .btn-contact {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1.1rem;
+  }
+  
+  .navbar-logo {
+    height: 60px;
+  }
+  
+  /* Hero section */
+  .hero-title .title-main {
+    font-size: 8rem;
+  }
+  
+  .title-prefix {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  /* Section headings */
+  .section-title,
+  .about-heading {
+    font-size: 4.5rem;
+  }
+  
+  /* About section */
+  .about-label {
+    font-size: 1rem;
+  }
+  
+  .about-description {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+  
+  .feature-text {
+    font-size: 1.25rem;
+  }
+  
+  .feature-icon-container {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .about-cta-button {
+    font-size: 1.1rem;
+    padding: 0.85rem 1.75rem;
+  }
+  
+  /* Services section */
+  .service-title {
+    font-size: 1.5rem;
+  }
+  
+  .service-description {
+    font-size: 1.1rem;
+  }
+  
+  .service-icon {
+    font-size: 2.5rem;
+  }
+  
+  /* Projects section */
+  .projects-title {
+    font-size: 3rem;
+  }
+  
+  .projects-intro p {
+    font-size: 1.25rem;
+  }
+  
+  .project-name {
+    font-size: 1.5rem;
+  }
+  
+  .project-category {
+    font-size: 1rem;
+  }
+  
+  /* Testimonials */
+  .testimonial-card {
+    padding: 40px;
+  }
+  
+  .testimonial-text {
+    font-size: 1.2rem;
+  }
+  
+  .client-name {
+    font-size: 1.25rem;
+  }
+  
+  /* Footer */
+  .footer-heading {
+    font-size: 1.5rem;
+  }
+  
+  .footer-links li a,
+  .footer-address p {
+    font-size: 1.1rem;
+  }
+  
+  .footer-tagline {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+  
+  .footer-cta-btn {
+    font-size: 1.1rem;
+    padding: 0.85rem 1.75rem;
+  }
+  
+  /* General spacing improvements */
+  .section-container {
+    padding: 0 2rem;
+  }
+  
+  .gap-8 {
+    gap: 2.5rem;
+  }
+  
+  .gap-12 {
+    gap: 3.5rem;
+  }
+}
