@@ -1,48 +1,44 @@
-# Welcome to your Tester project
+# SBC Construction Website
 
-**Use your preferred IDE**
+This is a static HTML, CSS, and JavaScript website for SBC Construction, a fictional construction company. The website showcases the company's services, projects, team, and contact information.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Website Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The website consists of the following pages:
 
-Follow these steps:
+- `index.html` - Home page with overview of the company and services
+- `about.html` - About page with company history, mission, values, and team
+- `services.html` - Services page with detailed information about offered services
+- `projects.html` - Projects portfolio showcasing completed work
+- `contact.html` - Contact page with form and company information
+- `404.html` - Error page for not found resources
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Files and Directories
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- `css/styles.css` - Main stylesheet for the website
+- `js/main.js` - JavaScript functionality for navigation, animations, etc.
+- `images/` - Directory containing all images used in the website
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Features
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- Fully responsive design that works on mobile, tablet, and desktop devices
+- Modern, clean UI with consistent branding
+- Interactive elements like the mobile menu toggle
+- Scroll animations for enhanced user experience
+- Complete navigation system linking all pages
 
-**Edit a file directly in GitHub**
+## How to Use
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. Simply open any of the HTML files in a web browser to view the website
+2. No server or build process is required as this is a static website
+3. All links are relative, so the website can be hosted in any directory
 
-**Use GitHub Codespaces**
+## Credits
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Images: Various sources from Pexels
+- Icons: Font Awesome
+- Fonts: System fonts with fallbacks
 
-## What technologies are used for this project?
+## License
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
+This project is available for use under the MIT License.
