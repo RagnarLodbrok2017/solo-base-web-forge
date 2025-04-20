@@ -254,14 +254,14 @@ $(document).ready(function() {
         const scrollProgress = docHeight > 0 ? scrollY / docHeight : 0;
         // Set bottom from 0px (top) to -1000px (bottom), adjust as needed
         const minBottom = 0;
-        const maxBottom = -1000; // px
+        const maxBottom = 1000; // px
         const newBottom = minBottom + (maxBottom - minBottom) * scrollProgress;
-        heroLanding.style.bottom = `${newBottom}px`;
+        heroLanding.style.left = `${newBottom}px`;
         // Animate clip-path values
-        const startX1 = 20, endX1 = 50;
-        const startX2 = 80, endX2 = 50;
+        const startX1 = 20, endX1 = 80;
+        const startX2 = 80, endX2 = 100;
         const x1 = startX1 + (endX1 - startX1) * 3 * scrollProgress;
-        const x2 = startX2 + (endX2 - startX2) * 3 * scrollProgress;
+        const x2 = startX2 + (endX2 - startX2) * 4 * scrollProgress;
         heroOverlay.style.setProperty('--clip-x1', `${x1}%`);
         heroOverlay.style.setProperty('--clip-x2', `${x2}%`);
       });
