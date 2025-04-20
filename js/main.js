@@ -178,6 +178,18 @@ $(document).ready(function() {
     // Initialize scroll state
     handleScroll();
 
+    // Throttle function to limit scroll-triggered animation handler
+    function throttle(fn, wait) {
+        let lastTime = 0;
+        return function(...args) {
+            const now = Date.now();
+            if (now - lastTime >= wait) {
+                lastTime = now;
+                fn.apply(this, args);
+            }
+        };
+    }
+
     // Animate elements when they come into view
     function animateOnScroll() {
         $('.animate-on-scroll').each(function() {
@@ -191,12 +203,12 @@ $(document).ready(function() {
         });
     }
 
-    // Run animation check on scroll
-    $(window).scroll(animateOnScroll);
-    
+    // Run animation check on scroll with throttle
+    $(window).scroll(throttle(animateOnScroll, 100));
+
     // Run initial animation check
     animateOnScroll();
-    
+
     // Add smooth scrolling to all links
     $('a[href*="#"]').on('click', function(e) {
         if (this.hash !== '') {
@@ -224,7 +236,7 @@ $(document).ready(function() {
 
     // Run animation check on load and scroll
     window.addEventListener('load', animateOnScroll);
-    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('scroll', throttle(animateOnScroll, 100));
 
     // Testimonial carousel (if needed)
     // This is a placeholder for adding a testimonial carousel functionality
