@@ -4,8 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const indicators = document.querySelectorAll('.indicator');
     const prevBtn = document.querySelector('.carousel-prev');
     const nextBtn = document.querySelector('.carousel-next');
+    const carousel = document.querySelector('.testimonial-carousel');
     
     let currentIndex = 2; // Start with the middle slide active (0-indexed)
+    let isScrolling = false;
+    let autoRotate;
+    let animationFrame;
     
     // Initialize carousel
     updateCarousel();
@@ -33,29 +37,76 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Auto rotate carousel
-    let autoRotate = setInterval(function() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateCarousel();
-    }, 5000);
+    // Optimize scroll performance
+    window.addEventListener('scroll', function() {
+        isScrolling = true;
+        
+        // If we're already waiting for an animation frame, don't request another one
+        if (!animationFrame) {
+            animationFrame = window.requestAnimationFrame(function() {
+                // Check if carousel is in viewport before updating
+                if (carousel && isElementInViewport(carousel)) {
+                    startAutoRotate();
+                } else {
+                    stopAutoRotate();
+                }
+                
+                isScrolling = false;
+                animationFrame = null;
+            });
+        }
+    }, { passive: true });
+    
+    // Start auto-rotation when page loads
+    startAutoRotate();
     
     // Pause auto rotation when hovering over carousel
-    const carousel = document.querySelector('.testimonial-carousel');
     if (carousel) {
         carousel.addEventListener('mouseenter', function() {
-            clearInterval(autoRotate);
+            stopAutoRotate();
         });
         
         carousel.addEventListener('mouseleave', function() {
-            autoRotate = setInterval(function() {
-                currentIndex = (currentIndex + 1) % slides.length;
-                updateCarousel();
-            }, 5000);
+            startAutoRotate();
         });
+    }
+    
+    // Function to start auto rotation
+    function startAutoRotate() {
+        if (!autoRotate) {
+            autoRotate = setInterval(function() {
+                if (!isScrolling) {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    updateCarousel();
+                }
+            }, 5000);
+        }
+    }
+    
+    // Function to stop auto rotation
+    function stopAutoRotate() {
+        if (autoRotate) {
+            clearInterval(autoRotate);
+            autoRotate = null;
+        }
+    }
+    
+    // Function to check if element is in viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0 &&
+            rect.left <= (window.innerWidth || document.documentElement.clientWidth) &&
+            rect.right >= 0
+        );
     }
     
     // Function to update carousel state
     function updateCarousel() {
+        // Don't update if we're scrolling
+        if (isScrolling) return;
+        
         // Update slides
         slides.forEach((slide, index) => {
             slide.classList.remove('active');
@@ -63,29 +114,21 @@ document.addEventListener('DOMContentLoaded', function() {
             // Calculate position relative to current slide
             const position = (index - currentIndex + slides.length) % slides.length;
             
-            // Reset all transforms
-            slide.style.transform = '';
-            slide.style.opacity = '';
-            slide.style.zIndex = '';
+            // Use CSS classes instead of inline styles for better performance
+            slide.classList.remove('slide-center', 'slide-left', 'slide-right', 'slide-hidden');
             
             if (position === 0) {
                 // Current slide (center)
-                slide.classList.add('active');
-                slide.style.transform = 'scale(1.1)';
-                slide.style.opacity = '1';
-                slide.style.zIndex = '10';
-                slide.style.filter = 'blur(0)';
-            } else if (position === 1 || position === (slides.length - 1)) {
-                // Side slides
-                const direction = position === 1 ? 110 : -110;
-                slide.style.transform = `translateX(${direction}%) scale(0.8)`;
-                slide.style.opacity = '0.7';
-                slide.style.zIndex = '5';
-                slide.style.filter = 'blur(1px)';
+                slide.classList.add('active', 'slide-center');
+            } else if (position === 1) {
+                // Right side slide
+                slide.classList.add('slide-right');
+            } else if (position === (slides.length - 1)) {
+                // Left side slide
+                slide.classList.add('slide-left');
             } else {
                 // Hidden slides
-                slide.style.opacity = '0';
-                slide.style.zIndex = '1';
+                slide.classList.add('slide-hidden');
             }
         });
         
