@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const config = {
         baseScale: 1.05,
         maxExtraScale: 0.1,      // Additional scale on interaction
-        movementIntensity: 40,   // Increased from 20 to 40
+        movementIntensity: 20,   // Increased from 20 to 40
         rotationIntensity: 2,    // Degrees of rotation
         perspective: 1000,       // 3D perspective
         transitionSpeed: 0.2     // Seconds for transition
@@ -116,6 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentRotateY = 0;
                 scheduleAnimation();
             }
-        }, 16); // ~60fps
+        }, 60); // ~60fps
     });
 });
