@@ -241,4 +241,21 @@ $(document).ready(function() {
     // Testimonial carousel (if needed)
     // This is a placeholder for adding a testimonial carousel functionality
     // You can implement a simple carousel using JavaScript if required
+
+    // Dynamic bottom positioning for hero-landing-image-container on scroll
+    (function() {
+      const heroLanding = document.querySelector('.hero-landing-image-container');
+      if (!heroLanding) return;
+      window.addEventListener('scroll', function() {
+        // Calculate scroll progress (0 at top, 1 at bottom)
+        const scrollY = window.scrollY || window.pageYOffset;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollProgress = docHeight > 0 ? scrollY / docHeight : 0;
+        // Set bottom from 0px (top) to 200px (bottom), adjust as needed
+        const minBottom = 0;
+        const maxBottom = -1000; // px
+        const newBottom = minBottom + (maxBottom - minBottom) * scrollProgress;
+        heroLanding.style.bottom = `${newBottom}px`;
+      });
+    })();
 });
