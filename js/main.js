@@ -242,20 +242,28 @@ $(document).ready(function() {
     // This is a placeholder for adding a testimonial carousel functionality
     // You can implement a simple carousel using JavaScript if required
 
-    // Dynamic bottom positioning for hero-landing-image-container on scroll
+    // Dynamic bottom positioning for hero-landing-image-container on scroll and dynamic clip-path for hero-overlay
     (function() {
       const heroLanding = document.querySelector('.hero-landing-image-container');
-      if (!heroLanding) return;
+      const heroOverlay = document.querySelector('.hero-overlay');
+      if (!heroLanding || !heroOverlay) return;
       window.addEventListener('scroll', function() {
         // Calculate scroll progress (0 at top, 1 at bottom)
         const scrollY = window.scrollY || window.pageYOffset;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrollProgress = docHeight > 0 ? scrollY / docHeight : 0;
-        // Set bottom from 0px (top) to 200px (bottom), adjust as needed
+        // Set bottom from 0px (top) to -1000px (bottom), adjust as needed
         const minBottom = 0;
         const maxBottom = -1000; // px
         const newBottom = minBottom + (maxBottom - minBottom) * scrollProgress;
         heroLanding.style.bottom = `${newBottom}px`;
+        // Animate clip-path values
+        const startX1 = 20, endX1 = 50;
+        const startX2 = 80, endX2 = 50;
+        const x1 = startX1 + (endX1 - startX1) * 3 * scrollProgress;
+        const x2 = startX2 + (endX2 - startX2) * 3 * scrollProgress;
+        heroOverlay.style.setProperty('--clip-x1', `${x1}%`);
+        heroOverlay.style.setProperty('--clip-x2', `${x2}%`);
       });
     })();
 });
